@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33988008425269454}
   - component: {fileID: 23872811905694954}
   m_Layer: 0
-  m_Name: Cylinder.001
+  m_Name: Goalpost object
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
