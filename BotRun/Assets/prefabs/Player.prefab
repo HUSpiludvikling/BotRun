@@ -226,7 +226,7 @@ MonoBehaviour:
     ForwardSpeed: 10
     BackwardSpeed: 5
     StrafeSpeed: 5
-    RunMultiplier: 2.5
+    RunMultiplier: 2
     RunKey: 304
     JumpForce: 50
     SlopeCurveModifier:
