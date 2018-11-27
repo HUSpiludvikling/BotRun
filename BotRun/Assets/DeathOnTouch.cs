@@ -17,6 +17,6 @@ public class DeathOnTouch : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Player")
-            SceneManager.LoadScene("SampleScene");
+            SceneManager.LoadScene("level 1");
     }
 }
