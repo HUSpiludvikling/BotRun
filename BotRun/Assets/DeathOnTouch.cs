@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 public class DeathOnTouch : MonoBehaviour {
-
+    public string SceneString;
 	// Use this for initialization
 	void Start () {
 		
@@ -17,6 +17,6 @@ public class DeathOnTouch : MonoBehaviour {
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.name == "Player")
-            SceneManager.LoadScene("level 1");
+            SceneManager.LoadScene(SceneString);
     }
 }
