@@ -9,11 +9,6 @@ public class OpenOnKey : MonoBehaviour
     [SerializeField] KeyCode OpenKey = KeyCode.Escape;
     //Den sørger for at der er en utjekket bool
     bool isOpen = false;
-    // Use this for initialization
-    void Start()
-    {
-
-    }
 
     // Update is called once per frame
     void Update()
@@ -35,6 +30,7 @@ public class OpenOnKey : MonoBehaviour
     {
         //Kan ikke huske det.
         isopen = !isopen;
+
         //For hver child af dette object...
         foreach (Transform item in transform)
         {
