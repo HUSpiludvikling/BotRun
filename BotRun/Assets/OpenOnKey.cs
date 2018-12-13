@@ -2,11 +2,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.Characters.FirstPerson;
 
 public class OpenOnKey : MonoBehaviour
 {
     //Der er en tast der hedder OpenKey, som er sat til esc, men man kan ændre den.
     [SerializeField] KeyCode OpenKey = KeyCode.Escape;
+    [SerializeField] RigidbodyFirstPersonController FPController;
     //Den sørger for at der er en utjekket bool
     bool isOpen = false;
     // Use this for initialization
@@ -25,7 +27,11 @@ public class OpenOnKey : MonoBehaviour
             Pause(ref  isOpen);
         }
     }
-
+    public void Unpause()
+    {
+        isOpen = true;
+        Pause(ref isOpen);
+    }
     /// <summary>
     /// Pauses or unpauses the game
     /// </summary>
@@ -46,12 +52,14 @@ public class OpenOnKey : MonoBehaviour
         {
             //...sættes tidens hastighed til 0 altså stopper tiden.
             Time.timeScale = 0f;
+            FPController.enabled = false;
         }
         //Ellers, hvis spillet ikke er pauset og isopen derfor ikke er aktiveret...
         else
         {
             //...sættes tidens hastighed til 1 som er standart tidshastighed.
             Time.timeScale = 1f;
+            FPController.enabled = true;
         }
     }
 }
