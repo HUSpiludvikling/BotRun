@@ -15,7 +15,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float BackwardSpeed = 4.0f;  // Speed when walking backwards
             public float StrafeSpeed = 4.0f;    // Speed when walking sideways
             public float RunMultiplier = 2.0f;   // Speed when sprinting
-	        public KeyCode RunKey = KeyCode.LeftShift;
+            public float BonusSpeed;
+            public float BonusDuration;
+            public KeyCode RunKey = KeyCode.LeftShift;
             public float JumpForce = 30f;
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
@@ -41,7 +43,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 				{
 					//forwards
 					//handled last as if strafing and moving forward at the same time forwards speed should take precedence
-					CurrentTargetSpeed = ForwardSpeed;
+					CurrentTargetSpeed = ForwardSpeed + BonusSpeed;
 				}
 #if !MOBILE_INPUT
 	            if (Input.GetKey(RunKey))
@@ -134,6 +136,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jump = true;
             }
+            if (movementSettings.BonusDuration > 0)
+            {
+                movementSettings.BonusDuration -= Time.deltaTime;
+            }
+        }
+
+        public void AddSpeed(float Speed, float Duration)
+        {
+            movementSettings.BonusSpeed = Speed;
+            movementSettings.BonusDuration = Duration;
+
         }
 
 
