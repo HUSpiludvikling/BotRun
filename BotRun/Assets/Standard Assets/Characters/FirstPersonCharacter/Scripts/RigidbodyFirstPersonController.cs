@@ -19,6 +19,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public float BonusDuration;
             public KeyCode RunKey = KeyCode.LeftShift;
             public float JumpForce = 30f;
+            public float JumpBoost;
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
 
@@ -146,7 +147,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             movementSettings.BonusSpeed = Speed;
             movementSettings.BonusDuration = Duration;
+        }
 
+        public void AddJumpHeight(float Height, float Duration)
+        {
+            movementSettings.JumpBoost = Height;
+            movementSettings.BonusDuration = Duration;
         }
 
 
