@@ -19,7 +19,7 @@ public class JumpBuff : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             other.gameObject.GetComponent<RigidbodyFirstPersonController>().AddJumpHeight(Height, Duration);
             Destroy(gameObject);

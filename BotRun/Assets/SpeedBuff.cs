@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityStandardAssets.Characters.FirstPerson;
 
 public class SpeedBuff : MonoBehaviour {
@@ -20,7 +19,7 @@ public class SpeedBuff : MonoBehaviour {
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.tag == "Player")
+        if (other.CompareTag("Player"))
         {
             other.gameObject.GetComponent<RigidbodyFirstPersonController>().AddSpeed(Speed, Duration);
             Destroy(gameObject);

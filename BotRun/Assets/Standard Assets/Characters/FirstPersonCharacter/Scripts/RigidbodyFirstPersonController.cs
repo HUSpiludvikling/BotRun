@@ -64,6 +64,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 get { return m_Running; }
             }
+
+            public float BonusJumpDuration { get; internal set; }
 #endif
         }
 
@@ -137,9 +139,25 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jump = true;
             }
+
+            //SpeedBoost Reset
             if (movementSettings.BonusDuration > 0)
             {
                 movementSettings.BonusDuration -= Time.deltaTime;
+            }
+            else
+            {
+                movementSettings.BonusSpeed = 0;
+            }
+
+            //Jumpboost Reset
+            if (movementSettings.BonusJumpDuration > 0)
+            {
+                movementSettings.BonusJumpDuration -= Time.deltaTime;
+            }
+            else
+            {
+                movementSettings.JumpBoost = 0;
             }
         }
 
@@ -151,8 +169,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void AddJumpHeight(float Height, float Duration)
         {
-            movementSettings.JumpBoost = Height;
-            movementSettings.BonusDuration = Duration;
+            movementSettings.JumpBoost += Height;
+            movementSettings.BonusJumpDuration += Duration;
         }
 
 
@@ -185,7 +203,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 {
                     m_RigidBody.drag = 0f;
                     m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
-                    m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
+                    m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce + movementSettings.JumpBoost, 0f), ForceMode.Impulse);
                     m_Jumping = true;
                 }
 
