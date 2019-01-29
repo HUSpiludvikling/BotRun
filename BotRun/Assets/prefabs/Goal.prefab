@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33667721502147590}
   - component: {fileID: 23454681520277378}
   - component: {fileID: 65793134434961784}
-  - component: {fileID: 114608786190852370}
+  - component: {fileID: 114575543090753078}
   m_Layer: 0
   m_Name: Goal
   m_TagString: Untagged
@@ -97,7 +97,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114608786190852370
+--- !u!114 &114575543090753078
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +105,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1086684933406204}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58bf2bc29cc09914f846aeaf4f17b9cb, type: 3}
+  m_Script: {fileID: 11500000, guid: 5305d6de06e1f264093f532258f61883, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinSceen: 
+  panel: {fileID: 0}
+  ScoreText: {fileID: 0}
+  HighScoreText: {fileID: 0}

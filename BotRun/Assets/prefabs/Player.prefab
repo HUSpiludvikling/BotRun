@@ -22,9 +22,10 @@ GameObject:
   - component: {fileID: 54513665078927228}
   - component: {fileID: 136628280478807764}
   - component: {fileID: 114701959471129360}
+  - component: {fileID: 114091740238649276}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -210,6 +211,17 @@ MonoBehaviour:
   rigidbodyFirstPersonController: {fileID: 114701959471129360}
   StrideInterval: 4
   RunningStrideLengthen: 0.722
+--- !u!114 &114091740238649276
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1678285019480482}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fb1d10b3ed40564fb24caa2dde21549, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114701959471129360
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -227,8 +239,11 @@ MonoBehaviour:
     BackwardSpeed: 5
     StrafeSpeed: 5
     RunMultiplier: 2
+    BonusSpeed: 0
+    BonusDuration: 0
     RunKey: 304
     JumpForce: 50
+    JumpBoost: 0
     SlopeCurveModifier:
       serializedVersion: 2
       m_Curve:

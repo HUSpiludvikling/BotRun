@@ -24,12 +24,23 @@ public class FinishLine : MonoBehaviour {
     {
         if(other.gameObject.tag == "Player")
         {
-            other.gameObject.GetComponent<HighScore>();
-            Time.timeScale = 0f;
-            panel.SetActive(true);
-            Cursor.visible = true;
-            ScoreText.text = "Score: " + Time.timeSinceLevelLoad.ToString(".3");
-            HighScoreText.text = "High Score:" + other.gameObject.GetComponent<HighScore>().GetHighScore(SceneManager.GetActiveScene().name);
+            DisplayTime(other);
         }
+    }
+
+    private void DisplayTime(Collision other)
+    {
+        Debug.Log("Hej");
+        highScore = other.gameObject.GetComponent<HighScore>();
+        Time.timeScale = 0f;
+        panel.SetActive(true);
+        Cursor.visible = true;
+        float ScoreTime = Time.timeSinceLevelLoad;
+        ScoreText.text = "Score: " + ScoreTime.ToString("0.00");
+
+        highScore.SetHighScore(SceneManager.GetActiveScene().name, ScoreTime);
+        float highScoreTime = highScore.GetHighScore(SceneManager.GetActiveScene().name);
+
+        HighScoreText.text = "Highscore: " + highScoreTime.ToString("0.00");
     }
 }
