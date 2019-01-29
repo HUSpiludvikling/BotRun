@@ -13447,7 +13447,7 @@ GameObject:
   - component: {fileID: 1013139816}
   - component: {fileID: 1013139815}
   m_Layer: 0
-  m_Name: Plane (1)
+  m_Name: goal plane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13464,7 +13464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 58bf2bc29cc09914f846aeaf4f17b9cb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  WinSceen: level 2
+  WinSceen: level 3
 --- !u!64 &1013139816
 MeshCollider:
   m_ObjectHideFlags: 0
