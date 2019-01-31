@@ -26,7 +26,7 @@ public class HighScore : MonoBehaviour {
         }
     }
 
-    void SetHighScore(string Level, float HighScore)
+    public void SetHighScore(string Level, float HighScore)
     {
         if (HighScore > GetHighScore(Level))
         {

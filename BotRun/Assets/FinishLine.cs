@@ -27,6 +27,7 @@ public class FinishLine : MonoBehaviour {
             DisplayTime(other);
         }
     }
+    }
 
     private void DisplayTime(Collision other)
     {
