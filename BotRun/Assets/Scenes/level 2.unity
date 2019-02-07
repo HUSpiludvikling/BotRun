@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465782, g: 0.49641252, b: 0.5748167, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5695,7 +5695,7 @@ Transform:
   - {fileID: 767471066}
   - {fileID: 2018866151}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &384468241 stripped
 GameObject:
@@ -7856,7 +7856,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &588432189 stripped
 GameObject:
@@ -19400,6 +19400,12 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c836ca73cff93024f9141e1bb4acb710, type: 2}
   m_IsPrefabAsset: 0
+--- !u!114 &1476254350 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114701959471129360, guid: c836ca73cff93024f9141e1bb4acb710,
+    type: 2}
+  m_PrefabInternal: {fileID: 1476254349}
+  m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}
 --- !u!1 &1480154459 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1759083154758330, guid: f50a82f7b3849cf4c993d439cb931eef,
@@ -26379,7 +26385,7 @@ RectTransform:
   - {fileID: 210188877}
   - {fileID: 1656496833}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -28493,6 +28499,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114322829987196224, guid: 3869dd401726818488d0c53a3c49f350,
+        type: 2}
+      propertyPath: FPController
+      value: 
+      objectReference: {fileID: 1476254350}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3869dd401726818488d0c53a3c49f350, type: 2}
   m_IsPrefabAsset: 0

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8495,6 +8495,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4524379738956734, guid: 4da00b8415880f34394e462295d35ec2,
     type: 2}
   m_PrefabInternal: {fileID: 205539166}
+--- !u!114 &205868275 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114701959471129360, guid: c836ca73cff93024f9141e1bb4acb710,
+    type: 2}
+  m_PrefabInternal: {fileID: 1888960990}
+  m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}
 --- !u!1001 &206589431
 Prefab:
   m_ObjectHideFlags: 0
@@ -16960,7 +16966,7 @@ Transform:
   - {fileID: 1737731849}
   - {fileID: 308017544}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &396950637
 Prefab:
@@ -17961,6 +17967,11 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114322829987196224, guid: 3869dd401726818488d0c53a3c49f350,
+        type: 2}
+      propertyPath: FPController
+      value: 
+      objectReference: {fileID: 205868275}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3869dd401726818488d0c53a3c49f350, type: 2}
   m_IsPrefabAsset: 0
@@ -64104,7 +64115,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1636917653
 Prefab:
